@@ -2,7 +2,7 @@
 
 <!-- Profil Admin -->
 @if (Auth::user())
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/profile-admin/{{ auth()->user()->id }}/edit">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin">
         <div class="sidebar-brand-icon">
             <img class="bg-white rounded-circle" width="34" height="34" src="{{ asset('assets/img/'.auth()->user()->gambar) }}">
         </div>

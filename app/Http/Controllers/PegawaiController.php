@@ -59,7 +59,8 @@ class PegawaiController extends Controller
     {
         return view('admin/update/update_pegawai', [
             'title' => 'Update Pegawai',
-            'pegawai'=> Pegawai::find($id)
+            'pegawai'=> Pegawai::find($id),
+            'fakultas' => Fakultas::all(),
         ]);
     }
 
@@ -71,7 +72,6 @@ class PegawaiController extends Controller
         $pegawai->nip = $request->nip;
         $pegawai->unit_kerja = $request->unit_kerja;
         $pegawai->fungsional = $request->fungsional;
-        $pegawai->golongan = $request->golongan;
         $pegawai->tugas_tambahan = $request->tugas_tambahan;
         $pegawai->s1 = $request->s1;
         $pegawai->s2 = $request->s2;

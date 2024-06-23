@@ -4,7 +4,7 @@
         <div class="logo">
             <a href="/">
                 <img src="{{ asset('assets/img/logo.png') }}" alt="logo">
-                <span>Pegawai</span>
+                <span>Universitas Kita</span>
             </a>
         </div>
         <div id="menu-bar" class="menu-bar">

@@ -185,6 +185,15 @@ nav {
     color: var(--primary-color);
 }
 
+/* Halaman Pegawai */
+.card {
+    height: 70;
+}
+
+.card-body .card-text {
+    font-size: 13px;
+}
+
 @media (width > 768px) {
     nav {
       position: static;
@@ -245,5 +254,13 @@ nav {
     .content-socials {
         justify-content: flex-start;
         padding-left: 0;
+    }
+
+    .card img {
+        height: 15vw;
+    }
+
+    .card-detail img {
+        height: 26vw;
     }
 }

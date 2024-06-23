@@ -4,7 +4,7 @@
     <div class="row">
         <!-- Gambar Profil Pegawai -->
         <div class="col-md-4 mb-4">
-            <div class="card">
+            <div class="card-detail">
                 <img src="{{ asset('assets/img/'. $pegawai->gambar) }}" class="card-img-top" alt="{{ $pegawai->nama_pegawai }}">
             </div>
         </div>
@@ -69,6 +69,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button class="btn btn-secondary">
+                <a class="text-white" href="/list-pegawai">Kembali</a>
+            </button>
         </div>
     </div>
 </div>
