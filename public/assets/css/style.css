@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --primary-color: #00abf0;
+    --secondary-color: #212429;
+    --text-light: #d1d5db;
+    --white: #ffffff;
+    --max-width: 1200px;
+}
+
+*{
+  /* font-family: 'Nunito',sans-serif; */
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* header */
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  max-width: var(--max-width);
+  margin-inline: auto;
+  z-index: 9;
+}
+
+.navbar-header {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--primary-color);
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.logo img {
+    display: flex;
+    max-width: 36px;
+}
+
+.logo span {
+    display: none;
+}
+
+.menu-bar {
+    font-size: 1.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.navbar-link {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: var(--primary-color);
+    transition: 0.5s;
+    z-index: -1;
+    transform: translateY(-100%);
+}
+
+.navbar-link.open {
+    transform: translateY(0);
+}
+
+.navbar-link a {
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.navbar-link .button-login a {
+    font-size: 1.2rem;
+    color: var(--white);
+}
+
+.navbar-link a:hover {
+    color: var(--secondary-color);
+}
+
+.navbar-link .button-login a:hover {
+    color: var(--text-light);
+}
+
+.content {
+    max-width: var(--max-width);
+    margin-inline: auto;
+    padding-block: 5rem 2rem;
+    padding-inline: 1rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.content-img img {
+    width: 100%;
+    max-width: 500px;
+    margin-inline: auto;
+    display: flex;
+}
+
+.content-title {
+    overflow: hidden;
+    text-align: center;
+}
+
+.content-title h1 {
+    font-size: 5rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 5rem;
+}
+
+.content-title h3 {
+    font-size: 4rem;
+    color: var(--primary-color);
+}
+
+.content-title p {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+}
+
+.content-title .btn {
+    padding: 0.75rem 1.5rem;
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 5rem;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.content-title .btn:hover {
+    color: var(--primary-color);
+    background-color: var(--white);
+}
+
+.content-socials {
+    padding-block: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content-socials a {
+    font-size: 1.5rem;
+    color: var(--text-light);
+}
+
+.content-socials a:hover {
+    color: var(--primary-color);
+}
+
+@media (width > 768px) {
+    nav {
+      position: static;
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .navbar-header {
+      padding: 0;
+      top: -1px;
+      background-color: transparent;
+    }
+
+    .logo span {
+      display: flex;
+    }
+
+    .menu-bar {
+      display: none;
+    }
+
+    .navbar-link {
+      position: static;
+      padding: 0;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: 3rem;
+      background-color: transparent;
+      transform: none;
+      margin-bottom: 0;
+    }
+
+    .navbar-link a {
+        color: white;
+    }
+
+    .navbar-link a:hover {
+      color: var(--primary-color);
+    }
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        padding-block: 2rem;
+    }
+
+    .content-img {
+        grid-area: 1/2/2/3;
+    }
+
+    .content-title {
+        text-align: left;
+    }
+
+    .content-socials {
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+}
