@@ -2,6 +2,7 @@
 @section('content')
 <div class="container">
     <div class="row">
+        <h4 class="fw-bold mb-4 text-light">Detail Pegawai</h4>
         <!-- Gambar Profil Pegawai -->
         <div class="col-md-4 mb-4">
             <div class="card-detail">

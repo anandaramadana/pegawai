@@ -1,8 +1,8 @@
 @extends('layout.app')
 @section('content')
-<div class="container mt-0">
+<section class="container">
     <div class="row mb-4">
-        <h4 class="fw-bold mb-4 mt-0 text-light">Kepegawaian</h4>
+        <h4 class="fw-bold mb-4 text-light">Kepegawaian</h4>
 
         <!-- Filter Berdasarkan Fakultas -->
         <div class="col-12">
@@ -36,5 +36,5 @@
             </div>
         @endforeach
     </div>
-</div>
+</section>
 @endsection
